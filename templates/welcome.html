@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Url eneter</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style >
+            .container{
+                margin-top: 50px;
+                margin-left: 50px;
+                margin-right: 50px;
+                align-self: center;
+                background-color: blanchedalmond;
+                width: 60%;
+                height: 150px;
+                align-content: center;
+
+            }
+            #long{
+                width: 55%;
+                height: 40px;
+                border: cadetblue 2px solid;
+                border-radius: 2px;
+                margin-top: 20px;
+                margin-right: 40px;
+                margin-left: 20px;
+                align-content: center;
+            }
+            #btn{
+                width: 100px;
+                height: 40px;
+                border-radius: 80px;
+            }
+            #short{
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+        </style>
+        
+    </head>
+    <body>
+        <p>{{LONGURL}}</p>
+        <p>{{SHORTURL}}</p>
+        <div class="container">
+            <form action="go" method="POST">
+                {% csrf_token %}
+                <input type="text" id="long" name="LONGURL" placeholder="Enter URL">
+                <input type="submit" id="btn" name="submit" value="Shorten"><br>
+                <input type="text" id="short" name="SHORTURL" value={{s_url}}>
+                <p>{{s_url}}</p>
+            </form> 
+        </div>
+    </body>
+</html>
