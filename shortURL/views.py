@@ -43,6 +43,7 @@ def urlRedirect(request,sh):
 def get_count(request):
     s_url_data=request.POST.get("scount","")
     s_url=s_url_data[n:]
+    print("in get count method",s_url)
     data=URLmanage.objects.get(surl=s_url)
     context={
         'count':data.count,

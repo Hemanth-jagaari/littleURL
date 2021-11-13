@@ -48,6 +48,14 @@
                
                 <p>{{SHORTURL}}</p>
             </form> 
+            <form method="POST" action="count">
+                {% csrf_token %}
+                
+                <p>{{count}}</p>
+                <input type="text" name="scount" id="scount" value={{SCOUNT}}>
+                <input type="submit" id="btn" name="submit" value="Count">
+            </form>
+
         </div>
     </body>
 </html>
