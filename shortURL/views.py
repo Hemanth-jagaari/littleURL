@@ -26,7 +26,7 @@ def generate_short(request):
         short_url='http://localhost:8000/'+s_url
         #form.instance.SHORTURL=s_url 
         ##request.POST['SHORTURL']=s_url
-        context={'SHORTURL':s_url,'LONGURL':l_url}
+        context={'SHORTURL':short_url,'LONGURL':l_url}
         return render(request,'welcome.html',context)
 
         """if form.is_valid():

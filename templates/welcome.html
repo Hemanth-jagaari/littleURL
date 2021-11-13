@@ -39,15 +39,13 @@
         
     </head>
     <body>
-        <p>{{LONGURL}}</p>
-        <p>{{SHORTURL}}</p>
         <div class="container">
             <form action="go" method="POST">
                 {% csrf_token %}
-                <input type="text" id="long" name="LONGURL" placeholder="Enter URL">
+                <input type="text" id="long" name="LONGURL" placeholder="Enter URL" value={{LONGURL}}>
                 <input type="submit" id="btn" name="submit" value="Shorten"><br>
-                <input type="text" id="short" name="SHORTURL" value={{s_url}}>
-                <p>{{s_url}}</p>
+               
+                <p>{{SHORTURL}}</p>
             </form> 
         </div>
     </body>
