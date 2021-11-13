@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <title>Url eneter</title>
-        {% load staticfiles %}
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style >
             .container{
@@ -36,10 +35,10 @@
                 margin-left: 20px;
             }
         </style>
-        <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+        
     </head>
     <body>
-        {% load static %}
+        
         <div class="container">
             <form action="go" method="POST">
                 {% csrf_token %}

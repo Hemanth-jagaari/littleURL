@@ -20,7 +20,7 @@ def generate_short(request):
         l_url=temp
         new_url=URLmap(long_url=l_url,short_url=s_url)
         new_url.save()
-        short_url='http://127.0.0.1:8000/'+s_url
+        short_url='https://pacific-ocean-98235.herokuapp.com/'+s_url
         context={'SHORTURL':short_url,'LONGURL':l_url}
         return render(request,'welcome.html',context)
 def urlRedirect(request,sh):
