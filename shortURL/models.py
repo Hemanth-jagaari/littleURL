@@ -6,4 +6,10 @@ class URLmap(models.Model):
     short_url=models.CharField(max_length=16)
     def __str__(self):
         return "Short URL for ->{} is {}".format(self.long_url,self.short_url)
-        
+class URLmanage(models.Model):
+    lurl=models.CharField(max_length=256)
+    surl=models.CharField(max_length=16)
+    count=models.IntegerField(default=0)
+    def __str__(self):
+        return "Short URL for ->{} is {}".format(self.lurl,self.surl)
+
