@@ -47,6 +47,6 @@ def get_count(request):
     data=URLmanage.objects.get(surl=s_url)
     context={
         'count':data.count,
-        'SURL':s_url
+        'SURL':s_url_data
     }
     return render(request,'welcome.html',context)
